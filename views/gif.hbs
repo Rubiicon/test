@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <a href="/" class="back">back</a>
+    <div class="result-search">
+        <div class="search-form">
+            <form method="post" action="/gif-search">
+                <input type="text" name="search[value]">
+                <input type="submit" value="search" id='submit' class="btn">
+            </form>
+        </div>
+
+        <ul class="gifs">
+            {{#each gifs}}
+            <li id="{{id}}">
+                <img src="{{img.url}}" alt="{{title}}" class="gif">
+                <img class="watermark"
+                    src="https://bucket.mlcdn.com/a/723/723665/images/63f78fa7b8ae6d5439f086254be291424153c162.png"
+                    alt="">
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

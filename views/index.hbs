@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div class="search">
+        <h1>NODE.JS INTERNSHIP TEST TASK 2021</h1>
+        <form method="post" action="/gif-search" class="main-form">
+            <input type="text" name="search[value]">
+            <input type="submit" value="search" id='submit' class="btn">
+        </form>
+
+        <ul class="name-list">
+            {{#each names}}
+            <li>
+                <a href="/{{this}}">{{this}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+
+</body>
+
+</html>
